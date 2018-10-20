@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-import NLDF2
+import ENLF
 import os
 import sys
 import tensorflow as tf
@@ -32,12 +32,12 @@ if __name__ == "__main__":
     
     num=0
     
-    model = NLDF2.Model()
+    model = ENLF.Model()
     model.build_model()
 
     sess = tf.Session()
     sess.run(tf.global_variables_initializer())
-    img_size = NLDF2.img_size
+    img_size = ENLF.img_size
     label_size =np.int( NLDF2.label_size)
     print(123)
     ckpt = tf.train.get_checkpoint_state('')
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     saver.restore(sess, ckpt.model_checkpoint_path)
 
     datasets = ['MSRA-B']
-  #['MSRA-B', 'HKU-IS', 'DUT-OMRON','PASCAL-S', 'ECSSD', 'SOD']
+  #['MSRA-B', 'HKU-IS', 'DUT-OMRON','PASCAL-S', 'ECSSD', 'NTI']
     if not os.path.exists('Result3'):
         os.mkdir('Result3')
     
@@ -59,7 +59,7 @@ if __name__ == "__main__":
         if not os.path.exists(save_dir):
             os.mkdir(save_dir)
 
-        save_dir = 'Result3/' + dataset + '/NLDF'
+        save_dir = 'Result3/' + dataset + '/ENLF'
         if not os.path.exists(save_dir):
             os.mkdir(save_dir)
    
@@ -89,7 +89,7 @@ if __name__ == "__main__":
 
                 result = cv2.resize(np.squeeze(result), (img_shape[1], img_shape[0]))
 
-                save_name = os.path.join(save_dir, img_name+'_NLDF.png')
+                save_name = os.path.join(save_dir, img_name+'_ENLF.png')
                 cv2.imwrite(save_name, (result*255).astype(np.uint8))
 
     sess.close()
