@@ -18,7 +18,7 @@ def load_img_list(dataset):
         path = 'dataset/DUT-OMRON/DUT-OMRON-image'
     elif dataset == 'PASCAL-S':
         path = 'dataset/PASCAL-S/pascal'
-    elif dataset == 'SOD': 
+    elif dataset == 'NTI': 
         path = 'dataset/SOD/images'
     elif dataset == 'ECSSD':
         path = 'dataset/ECSSD/images'
