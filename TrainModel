@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-import NLDF
+import ENLF
 import vgg16
 import tensorflow as tf
 import os
@@ -53,7 +53,7 @@ def load_train_val_list():
 
 if __name__ == "__main__":
 
-    model = NLDF.Model()
+    model = ENLF.Model()
    
     model.build_model()
     
