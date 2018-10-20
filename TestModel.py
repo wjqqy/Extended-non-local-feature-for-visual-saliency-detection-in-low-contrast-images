@@ -38,7 +38,7 @@ if __name__ == "__main__":
     sess = tf.Session()
     sess.run(tf.global_variables_initializer())
     img_size = ENLF.img_size
-    label_size =np.int( NLDF2.label_size)
+    label_size =np.int( ENLF.label_size)
     print(123)
     ckpt = tf.train.get_checkpoint_state('')
    
