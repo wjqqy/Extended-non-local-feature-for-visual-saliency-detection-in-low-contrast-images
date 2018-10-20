@@ -3,7 +3,4 @@ This repository contains the code of the paper:
 
 Xin Xu,Jie Wang, “Extended-non-local-feature-for-visual-saliency-detection-in-low-contrast-images”, IEEE  (ECCV 2018)
 
-The pre-train model and saliency map can be download at the project page.
-
-
 The npy file the VGG-16 can be download at this link: https://github.com/machrisaa/tensorflow-vgg
