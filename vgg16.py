@@ -97,4 +97,4 @@ class Vgg16:
         return tf.Variable(self.data_dict[name][0], name="weights")
 
     def L2(self, tensor, wd=0.001):
-return tf.mul(tf.nn.l2_loss(tensor), wd, name='L2-Loss')
+        return tf.mul(tf.nn.l2_loss(tensor), wd, name='L2-Loss')
