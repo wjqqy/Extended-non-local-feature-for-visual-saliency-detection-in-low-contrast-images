@@ -19,7 +19,7 @@ def load_img_list(dataset):
     elif dataset == 'PASCAL-S':
         path = 'dataset/PASCAL-S/pascal'
     elif dataset == 'NTI': 
-        path = 'dataset/SOD/images'
+        path = 'dataset/NTI/images'
     elif dataset == 'ECSSD':
         path = 'dataset/ECSSD/images'
 
