@@ -129,7 +129,7 @@ def MAE_Value(resDir, gtDir, method):
 
 if __name__ == "__main__":
 
-    method = 'NLDF'
+    method = 'ENLF'
 
     datasets = ['MSRA-B', 'HKU-IS', 'DUT-OMRON',
                 'PASCAL-S', 'ECSSD', 'NIT']
@@ -141,9 +141,9 @@ if __name__ == "__main__":
         mae = MAE_Value(resDir, gtDir, method)
         pr = PR_Curve(resDir, gtDir, method)
 
-        print dataset
-        print 'max F:', pr['curScore']
-        print 'MAE:', mae
+        print (dataset)
+        print ('max F:', pr['curScore'])
+        print 'MAE:', (mae)
 
 
 
